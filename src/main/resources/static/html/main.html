@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>MAIN PAGE</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/side.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@700&family=Baloo+Paaji+2:wght@700&family=Readex+Pro&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6dd0f19594.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav data-tooltip-text="클릭시 네비게이션이 생깁니다.">
+    <div class="toggle_icon"><i class="fas fa-angle-double-down"></i></div>
+    <ul class="toggle_menu">
+        <li>
+            <a href="/main">MAIN</a>
+        </li>
+        <li>
+            <a href="/logout">LOGOUT</a>
+        </li>
+    </ul>
+</nav>
+<header>
+    <div class="red"></div>
+    <div class="yellow"></div>
+    <div class="blue"></div>
+</header>
+<main>
+    <div data-tooltip-text="랭킹 차트입니다. 반응형입니다." class="game__rank">
+        <h3>Rank</h3>
+        <div class="game__ranks">
+
+            <div class="game__box__one">
+                <div class="game__box">
+                    <a href="/rock">
+                        <img src="../rock.png">
+                        <p>Best</p>
+                        <span>Title
+                            <br>가위바위보</span>
+                    </a>
+                </div>
+            </div>
+            <div class="game__box__two">
+                <div class="game__box">
+                    <a href="/tet">
+                        <img src="../tet.png">
+                        <p>Best</p>
+                        <span>Title<br>
+                            테트리스</span>
+                    </a>
+                </div>
+            </div>
+            <div class="game__box__three">
+                <div class="game__box">
+                    <a href="/block">
+                        <img src="../ball.png">
+                        <p>Best</p>
+                        <span>Title
+                            <br>벽돌 깨기</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin__box">
+        <div class="margin"></div>
+    </div>
+    <div class="game__contents" data-tooltip-text="게임 목록입니다. 반응형입니다.">
+        <h3>Content</h3>
+        <div class="game__grid">
+                <div  class="img__box">
+                    <img class="ball" src="../ball.png">
+                </div>
+                <div class="game__content" id="content1">
+                    <a href="/block">
+                <h5>벽돌 깨기</h5>
+                    </a>
+                    <p>공이 땋에 닿지 않게 하여 벽돌을 전부 다 부시면 승리합니다.</p>
+                </div>
+
+
+            <div class="img__box">
+                <img class="rock" src="../rock.png">
+            </div>
+            <div class="game__content" id="content2">
+                <a href="/rock">
+            <h5>가위바위보</h5>
+                </a>
+            <p>컴퓨터와의 피말리는 가위바위보 진검승부</p>
+            </div>
+            <div class="img__box">
+                <img class="tet" src="../tet.png">
+            </div>
+            <div class="game__content" id="content3">
+                <a href="/tet">
+                    <h5>테트리스</h5>
+                </a>
+            <p>남녀노소 누구나 해본 추억의 테트리스</p>
+        </div>
+        </div>
+    </div>
+</main>
+<aside id="sideBar" data-tooltip-text="내정보 입니다. 쿠키와 스토리지를 사용합니다.">
+    <div class="clock">
+        <h1 class="clock__h1">00:00</h1>
+        <h1 id="sideText"></h1>
+    </div>
+    <div>
+        <h3 id="sideScoreText">Victory</h3>
+        <h3 id="sideScore"></h3>
+    </div>
+</aside>
+<div class="info__button">Me</div>
+<footer></footer>
+</body>
+<script src="../js/nav.js"></script>
+<script src="../js/side.js"></script>
+</html>

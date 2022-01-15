@@ -1,0 +1,364 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+body video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.title {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vmin;
+    height: 70vmin;
+    z-index: 0;
+}
+
+.title div {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.title div div {
+    position: absolute;
+    font-size: 10vmin;
+    padding: 4vmin 0;
+}
+
+.text-top {
+    border-bottom: 1px solid white;
+    top: 0;
+}
+
+.text-top div span {
+    display: block;
+}
+
+.text-top div {
+    animation: showTopText 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 100%);
+    bottom: 0;
+}
+
+.text-bottom {
+    bottom: 0;
+}
+
+.text-bottom div {
+    animation: showBottomText 0.5s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+}
+
+.main_btn {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 40% 40% 20%;
+    place-items: center;
+}
+
+.main_btn button {
+    height: 30%;
+    width: 30%;
+    font-size: 30px;
+}
+
+button {
+    text-decoration: none;
+    color: white;
+    border: 5px solid white;
+    background-color: transparent;
+    transition: background-color 0.2s linear;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+}
+
+.join_btn {
+    width: 150px;
+    height: 40px;
+    font-size: 30px;
+}
+
+aside {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+aside button {
+    border: 2px solid white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+form input {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+form button {
+    width: 150px;
+    height: 40px;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+[data-tooltip-text]:hover {
+    position: relative;
+}
+
+[data-tooltip-text]:hover:after {
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+
+    color: #FFFFFF;
+    font-size: 12px;
+    content: attr(data-tooltip-text);
+    margin-bottom: 10px;
+    top: 130%;
+    left: 0;
+    padding: 7px 12px;
+    position: absolute;
+    width: auto;
+    min-width: 50px;
+    max-width: 300px;
+    word-wrap: break-word;
+
+    z-index: 9999;
+}
+
+@keyframes showTopText {
+    0% { transform: translate3d(0, 100%, 0); }
+    40%, 60% { transform: translate3d(0, 50%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+    0% { transform: translate3d(0, -100%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+
+/*main {*/
+/*    width: 70%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    position: relative;*/
+/*    background-color: white;*/
+/*    height: 90%;*/
+/*    overflow: hidden;*/
+/*    background-image: linear-gradient(*/
+/*            90deg, #000 50%, transparent 0),linear-gradient(*/
+/*            90deg, #000 50%, transparent 0),linear-gradient(*/
+/*            180deg, #000 50%, transparent 0),linear-gradient(*/
+/*            180deg, #000 50%, transparent 0);*/
+/*    background-position: 0 0, 0 100%, 0 0, 100% 0;*/
+/*    background-repeat: repeat-x,repeat-x,repeat-y,repeat-y;*/
+/*    background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;*/
+/*    animation-play-state: paused;*/
+/*}*/
+
+/*main div {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-evenly;*/
+/*    text-align: right;*/
+/*    width: 60%;*/
+/*    height: 40%;*/
+/*}*/
+
+/*.main_text {*/
+/*    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);*/
+/*    transform: translateY(-50px);*/
+/*    opacity: 0;*/
+/*    animation-name: main;*/
+/*    animation-timing-function: ease;*/
+/*    animation-duration: 5s;*/
+/*}*/
+
+/*.main_text div:first-child {*/
+/*    font-size: 60px;*/
+/*    width: 100%;*/
+
+/*}*/
+
+/*.main_text div:nth-child(2) {*/
+/*    font-size: 50px;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.main_text div:last-child {*/
+/*    font-size: 40px;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.main_btn {*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    position: absolute;*/
+/*    display: flex;*/
+/*    justify-content: space-evenly;*/
+/*    align-items: center;*/
+/*}*/
+
+/*main:hover {*/
+/*    animation: dotMove .3s infinite normal;*/
+/*}*/
+
+/*!*.margin {*!*/
+/*!*    background-color: yellowgreen;*!*/
+/*!*    width: 10vw;*!*/
+/*!*}*!*/
+
+/*!*aside {*!*/
+/*!*    margin-right: 20px;*!*/
+/*!*    width: 40vw;*!*/
+/*!*    height: 90vh;*!*/
+/*!*    display: flex;*!*/
+/*!*    flex-direction: column;*!*/
+/*!*    justify-content: center;*!*/
+/*!*    align-items: center;*!*/
+/*!*    background-color: white;*!*/
+/*!*    overflow: hidden;*!*/
+/*!*    background-image: linear-gradient(*!*/
+/*!*            90deg, #000 50%, transparent 0),linear-gradient(*!*/
+/*!*            90deg, #000 50%, transparent 0),linear-gradient(*!*/
+/*!*            180deg, #000 50%, transparent 0),linear-gradient(*!*/
+/*!*            180deg, #000 50%, transparent 0);*!*/
+/*!*    background-position: 0 0, 0 100%, 0 0, 100% 0;*!*/
+/*!*    background-repeat: repeat-x,repeat-x,repeat-y,repeat-y;*!*/
+/*!*    background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;*!*/
+/*!*    animation-play-state: paused;*!*/
+/*!*}*!*/
+
+/*!*aside:hover {*!*/
+/*!*    animation: dotMove .3s infinite normal;*!*/
+/*!*}*!*/
+
+/*nav ul {*/
+/*    list-style: none;*/
+/*}*/
+
+/*main div button {*/
+/*    text-decoration: none;*/
+/*    color: black;*/
+/*    border: 1px solid black;*/
+/*    background-color: #FFFFFF;*/
+/*    transition: background-color 0.2s linear;*/
+/*    width: 50%;*/
+/*    height: 10%;*/
+/*    transform: translateY(-50px);*/
+/*    opacity: 0;*/
+/*    animation-name: mainBtn;*/
+/*    animation-timing-function:ease;*/
+/*    animation-duration: 10s;*/
+/*    animation-delay: 4.1s;*/
+/*}*/
+
+/*button:hover {*/
+/*    color: white;*/
+/*    background-color: black;*/
+/*}*/
+
+
+/*nav ul li a {*/
+/*    text-decoration: none;*/
+/*}*/
+
+
+/*img {*/
+/*    width: 80%;*/
+/*    height: 90%;*/
+/*}*/
+
+/*@keyframes dotMove {*/
+/*    0% {*/
+/*        background-position: 0 0, 0 100%, 0 0, 100% 0;*/
+/*    }*/
+/*    100% {*/
+/*        background-position: 30px 0, -30px 100%, 0 -30px, 100% 30px;*/
+/*    }*/
+/*}*/
+
+
+/*@keyframes main {*/
+/*    0% {*/
+/*        transform: translateY(-50px);*/
+/*        opacity: 0;*/
+/*        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);*/
+/*    }*/
+/*    20% {*/
+/*        transform: translateY(0);*/
+/*        opacity: 1;*/
+/*        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);*/
+/*    }*/
+/*    80% {*/
+/*        transform: translateY(0);*/
+/*        opacity: 1;*/
+/*        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);*/
+/*    }*/
+/*    100% {*/
+/*        transform: translateY(50px);*/
+/*        opacity: 0;*/
+/*        clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);*/
+/*    }*/
+/*}*/
+
+/*@keyframes mainBtn {*/
+/*    0% {*/
+/*        transform: translateY(-50px);*/
+/*        opacity: 0;*/
+/*        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);*/
+/*    }*/
+/*    20% {*/
+/*        transform: translateY(0);*/
+/*        opacity: 1;*/
+/*        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);*/
+/*    }*/
+/*    80% {*/
+/*        transform: translateY(0);*/
+/*        opacity: 1;*/
+/*        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);*/
+/*    }*/
+/*    100% {*/
+/*        !*transform: translateY(50px);*!*/
+/*        opacity: 1;*/
+/*        !*clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);*!*/
+/*    }*/
+/*}*/

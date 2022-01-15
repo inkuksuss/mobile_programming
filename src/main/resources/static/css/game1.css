@@ -1,0 +1,16 @@
+body {
+    width: 100vw;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+.game__play {
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
